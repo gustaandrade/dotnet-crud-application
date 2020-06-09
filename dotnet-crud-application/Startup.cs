@@ -32,6 +32,10 @@ namespace dotnet_crud_application
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseDefaultFiles();
+
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();

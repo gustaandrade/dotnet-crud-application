@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Webmotors Ad API</title>
+</head>
+<body>
+<h1>Webmotors Ad Api</h1>
+<h2>Add</h2>
+<form action="javascript:void(0);" method="POST" onsubmit="addAd()">
+    <input type="text" id="ad-brand" placeholder="Brand">
+    <input type="text" id="ad-model" placeholder="Model">
+    <input type="text" id="ad-version" placeholder="Version">
+    <input type="number" id="ad-year" placeholder="Year">
+    <input type="number" id="ad-km" placeholder="Km">
+    <input type="text" id="ad-details" placeholder="Details">
+    <input type="submit" value="Add new Ad">
+</form>
+
+<div id="editForm">
+    <h2>Edit</h2>
+    <form action="javascript:void(0);" onsubmit="updateAd()">
+        <input type="hidden" id="edit-ad-id">
+        <input type="text" id="edit-ad-brand">
+        <input type="text" id="edit-ad-model">
+        <input type="text" id="edit-ad-version">
+        <input type="number" id="edit-ad-year">
+        <input type="number" id="edit-ad-km">
+        <input type="text" id="edit-ad-details">
+        <input type="submit" value="Edit Ad">
+        <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+    </form>
+</div>
+
+<p id="counter"></p>
+
+<table>
+    <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Version</th>
+        <th>Year</th>
+        <th>Km</th>
+        <th>Details</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tbody id="ads"></tbody>
+</table>
+
+<script src="js/site.js" asp-append-version="true"></script>
+<script type="text/javascript">
+    getAds();
+</script>
+</body>
+</html>
